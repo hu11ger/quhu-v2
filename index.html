@@ -75,9 +75,10 @@
             <div class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
               style="pointer-events: auto; background: transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; opacity: 0;">
               6</div>
-            <div id="2_1" ref="beat2_1" v-bind:class="{hide:this.notes.beat2[1]==0}"
+            <div id="2_1" ref="beat2_1" 
+            v-bind:class="{hide:this.notes.beat2[1]==0,panda:this.patterns.beat2[1] =='panda',frog:this.patterns.beat2[1] =='frog',frog_active:this.patterns.beat2[1] =='frog-active',pig:this.patterns.beat2[1] =='pig'}"
               class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center "
-              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translateX(-5px) translateY(1px);">
+              style="pointer-events: auto; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translateX(-5px) translateY(1px);">
               2</div>
             <div id="2_2" ref="beat2_2" v-bind:class="{hide:this.notes.beat2[2]==0}"
               class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center "
@@ -87,9 +88,10 @@
               class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center "
               style="transform: translate(-3px, -2px);pointer-events: auto;border: 3px solid transparent; background: transparent; width: 40px; height: 40px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
               2</div>
-            <div id="2_4" ref="beat2_4" v-bind:class="{hide:this.notes.beat2[4]==0}"
+            <div id="2_4" ref="beat2_4"
+            v-bind:class="{hide:this.notes.beat2[4]==0,panda:this.patterns.beat2[4] =='panda',frog:this.patterns.beat2[4] =='frog',frog_active:this.patterns.beat2[4] =='frog-active',pig:this.patterns.beat2[4] =='pig'}"
               class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center "
-              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 50px; height: 50px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              style="pointer-events: auto;  width: 50px; height: 50px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
               2</div>
           </div>
           <div class="d-lg-flex justify-content-center align-items-center align-items-lg-center"
@@ -260,24 +262,22 @@
             style="pointer-events: none; position: absolute; gap: 15.5px; transform: translate(6px) translateX(-10px) translateY(-10px) rotate(105deg); width: 100%; height: 100%; padding-left: 0px; margin-left: -7px;">
             <div id="1_4" ref="beat1_4" class="beat1_4"
               class="border rounded-circle d-lg-flex justify-content-lg-start align-items-lg-center"
-              v-bind:class="{hide:this.notes.beat1[4]==0}"
-              v-bind:style="{ currentPattern }"
-              >
+              v-bind:class="{hide:this.notes.beat1[4]==0,panda:this.patterns.beat1[4] =='panda',frog:this.patterns.beat1[4] =='frog',frog_active:this.patterns.beat1[4] =='frog-active',pig:this.patterns.beat1[4] =='pig'}">
               1</div>
             <div id="1_3" ref="beat1_3"
               class="border rounded-circle d-lg-flex justify-content-lg-start align-items-lg-center"
-              v-bind:class="{hide:this.notes.beat1[3]==0}"
-              style="pointer-events: auto; background: transparent; border: 3px solid transparent; width: 40px; height: 40px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              v-bind:class="{hide:this.notes.beat1[3]==0,panda:this.patterns.beat1[3] =='panda',frog:this.patterns.beat1[3] =='frog',frog_active:this.patterns.beat1[3] =='frog-active',pig:this.patterns.beat1[3] =='pig'}"
+              style="pointer-events: auto; width: 40px; height: 40px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: rotate(-88deg);">
               1</div>
             <div id="1_2" ref="beat1_2"
               class="border rounded-circle d-lg-flex justify-content-lg-start align-items-lg-center"
-              v-bind:class="{hide:this.notes.beat1[2]==0}"
-              style="transform: translate(3px, 0px);pointer-events: auto; background: transparent; border: 3px solid transparent; width: 34px; height: 34px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              v-bind:class="{hide:this.notes.beat1[2]==0,panda:this.patterns.beat1[2] =='panda',frog:this.patterns.beat1[2] =='frog',frog_active:this.patterns.beat1[2] =='frog-active',pig:this.patterns.beat1[2] =='pig'}"
+              style="transform: translate(3px, 0px);pointer-events: auto; width: 34px; height: 34px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: rotate(-88deg);">
               1</div>
             <div id="1_1" ref="beat1_1"
               class="border rounded-circle d-lg-flex justify-content-lg-start align-items-lg-center"
-              v-bind:class="{hide:this.notes.beat1[1]==0}"
-              style="pointer-events: auto; background: transparent; border: 3px solid transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translate(3px, 1px);">
+              v-bind:class="{hide:this.notes.beat1[1]==0,panda:this.patterns.beat1[1] =='panda',frog:this.patterns.beat1[1] =='frog',frog_active:this.patterns.beat1[1] =='frog-active',pig:this.patterns.beat1[1] =='pig'}"
+              style="pointer-events: auto; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translate(3px, 1px)rotate(-88deg);">
               1</div>
             <div class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
               style="pointer-events: auto; background: transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; overflow: visible; opacity: 0;">

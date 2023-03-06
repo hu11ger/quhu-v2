@@ -1,7 +1,18 @@
+.frog{
+    background: url('/assets/img/frog.png') center / cover, transparent;
+}
+.frog_active{
+    background: url('/assets/img/frog_active.png') center / cover, transparent;
+}
+.pig{
+    background: url('/assets/img/pig.png') center / cover, transparent;
+}
+.panda{
+    background: url('/assets/img/panda.png') center / cover, transparent;
+}
 
 .beat1_4{
     pointer-events: auto;
-    background: url('/assets/img/Frame 5.png') center / cover, transparent;
     border: 3px solid transparent;
     width: 50px;
     height: 50px;

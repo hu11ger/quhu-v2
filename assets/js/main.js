@@ -3,8 +3,83 @@ var VM = new Vue({
   data: {
     siteUrl:
       'https://static-mp-f069a595-b856-4970-895a-a3c3cd52557c.next.bspapp.com/',
-    // currentPatternUrl:'../img/Frame 6.png',
-    // currentPattern: {backgroundImage: 'url(' + this.currentPatternUrl + ')'},
+      //frog\frog-active\pig\panda
+    patterns: {
+      beat1: {
+        1: 'frog',
+        2: 'frog-active',
+        3: 'pig',
+        4: 'panda',
+      },
+      beat2: {
+        1: 'panda',
+        2: 'pig',
+        3: 'frog',
+        4: 'frog',
+      },
+      beat3: {
+        1: '',
+        2: '',
+        3: '',
+        4: '',
+      },
+      beat4: {
+        1: '',
+        2: '',
+        3: '',
+        4: '',
+      },
+      beat5: {
+        1: '',
+        2: '',
+        3: '',
+        4: '',
+      },
+      beat6: {
+        1: '',
+        2: '',
+        3: '',
+        4: '',
+      },
+      beat7: {
+        1: '',
+        2: '',
+        3: '',
+        4: '',
+      },
+      beat8: {
+        1: '',
+        2: '',
+        3: '',
+        4: '',
+      },
+      beat9: {
+        1: '',
+        2: '',
+        3: '',
+        4: '',
+      },
+      beat10: {
+        1: '',
+        2: '',
+        3: '',
+        4: '',
+      },
+      beat11: {
+        1: '',
+        2: '',
+        3: '',
+        4: '',
+      },
+      beat12: {
+        1: '',
+        2: '',
+        3: '',
+        4: '',
+      },
+    },
+    currentPatternUrl:'/assets/img/Frame 5.png',
+    currentPattern: 'Frame 5.png',
     inAnimation: false,
     playBtnColor: '#ffd38a',
     connectText: '连接设备',
@@ -427,6 +502,23 @@ var VM = new Vue({
       let noteLength = this.noteLength //音符长度 4n 8n 16n
 
       this.running = true //标记播放状态
+      //设定定时器，重复操作
+      let nIntervId
+      let intervCount = 1
+      eval('this.patterns.beat' + intervCount)[0] += '-active'
+      eval('this.patterns.beat' + intervCount)[1] += '-active'
+      eval('this.patterns.beat' + intervCount)[2] += '-active'
+      eval('this.patterns.beat' + intervCount)[3] += '-active'
+      intervCount += 1
+      
+      nIntervId=setInterval(() => {
+        eval('this.patterns.beat' + intervCount)[0] += '-active'
+        eval('this.patterns.beat' + intervCount)[1] += '-active'
+        eval('this.patterns.beat' + intervCount)[2] += '-active'
+        eval('this.patterns.beat' + intervCount)[3] += '-active'
+        intervCount +=1
+      }, 500)
+      
       this.playBtnColor = '#ffbba6'
       this.inAnimation = true
 
@@ -455,9 +547,14 @@ var VM = new Vue({
       // this.sampler.triggerAttackRelease('G4', noteLength, now + 3 * speedFactor)
 
       setTimeout(() => {
+      //清除定时器
+        clearInterval(nIntervId)
+        nIntervId = null;
+
         this.running = false
         this.playBtnColor = '#ffd38a'
         this.inAnimation = false
+
       }, speedFactor * count * 1000)
     },
 
@@ -832,49 +929,49 @@ var VM = new Vue({
       // let name = eval(refCmdWithID) //传递id参数,触发onclick事件
       // let hygroClick = this.hygroClick
 
-      使用指定的配置项和数据显示图表
-      hygrometer.setOption({
-        tooltip: {
-          show: false,
-        },
-        series: [
-          {
-            name,
-            type: 'liquidFill',
-            radius,
-            data: [eval(extent)],
-            label: {
-              show: false,
-            },
-            backgroundStyle: {
-              color: 'transparent',
-            },
-            color: [
-              {
-                type: 'solid',
-                x: 0,
-                y: 1,
-                x2: 0,
-                y2: 0,
-                colorStops: [
-                  {
-                    offset: 1,
-                    color: [color], // 0% 处的颜色
-                  },
-                ],
-              },
-            ],
-            outline: {
-              show: true,
-              borderDistance: 0,
-              itemStyle: {
-                borderColor: color,
-                borderWidth: 2,
-              },
-            },
-          },
-        ],
-      })
+      // 使用指定的配置项和数据显示图表
+      // hygrometer.setOption({
+      //   tooltip: {
+      //     show: false,
+      //   },
+      //   series: [
+      //     {
+      //       name,
+      //       type: 'liquidFill',
+      //       radius,
+      //       data: [eval(extent)],
+      //       label: {
+      //         show: false,
+      //       },
+      //       backgroundStyle: {
+      //         color: 'transparent',
+      //       },
+      //       color: [
+      //         {
+      //           type: 'solid',
+      //           x: 0,
+      //           y: 1,
+      //           x2: 0,
+      //           y2: 0,
+      //           colorStops: [
+      //             {
+      //               offset: 1,
+      //               color: [color], // 0% 处的颜色
+      //             },
+      //           ],
+      //         },
+      //       ],
+      //       outline: {
+      //         show: true,
+      //         borderDistance: 0,
+      //         itemStyle: {
+      //           borderColor: color,
+      //           borderWidth: 2,
+      //         },
+      //       },
+      //     },
+      //   ],
+      // })
 
       // hygrometer.on('click', function (e) {
       //   // console.log(e.seriesName)
