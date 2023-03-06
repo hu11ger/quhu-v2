@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" style="
+    width: 1030px;
+    height: 768px;
+    color: #fffcf7;
+    background: url('/assets/img/background2.jpg') center / contain no-repeat,
+      #fffcf7;
+    --bs-body-bg: #fffcf7;
+    --bs-primary: #fffcf7;
+    --bs-primary-rgb: 176, 227, 254;
+  ">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>趣呼 QUHU</title>
+  <link rel="stylesheet" href="/assets/bootstrap/css/main.css" />
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+  <!-- elementui -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&amp;display=swap" />
+  <!-- 动画css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+</head>
+
+<body id="page-top" data-bs-target="#mainNav" data-bs-offset="72" data-bs-spy="scroll" style="
+      width: 100%;
+      height: 100%;
+      background: url('/assets/img/background2.jpg'), #fffcf7;
+      color: #fffcf7;
+      --bs-body-bg: #fffcf7;
+    ">
+  <div id="app">
+    <div class="mask1" id="mask"></div>
+    <header class="text-center text-white masthead" style="
+          width: 100%;
+          height: 100%;
+          --bs-primary: #fffcf7;
+          --bs-primary-rgb: 176, 227, 254;
+          --bs-success: #5ca1c0;
+          --bs-success-rgb: 92, 161, 192;
+          color: var(--bs-primary);
+          background: url('/assets/img/background2.jpg') center / contain
+              no-repeat,
+            transparent;
+          padding-top: 84px;
+        ">
+      <div
+        style="width: 600px;height: 600px;margin-right: 223px;margin-left: 231px;background: url(&quot;/assets/img/circle3.png&quot;) center / cover;transform: translate(0px);">
+        <div class="d-lg-flex justify-content-lg-center align-items-lg-center"
+          style="height: 600px; background: url(&quot;/assets/img/dot2.png&quot;) center center / cover no-repeat; margin-left: 11px; transform: translate(0px) translateY(7px) rotate(-12deg); position: relative; min-width: 300px; min-height: 300px;">
+          <div class="d-lg-flex justify-content-center align-items-center align-items-lg-center"
+            style=" pointer-events: none; gap: 15.5px; transform: translate(7px) translateX(1px) translateY(-5px) rotate(-45deg); width: 100%; height: 100%; padding-left: 0px; margin-left: -7px;">
+            <div id="8_4" ref="beat8_4" v-bind:class="{hide:this.notes.beat8[4]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="transform: translate(-2px, -1px);pointer-events: auto; background: transparent; border: 3px solid transparent; width: 50px; height: 50px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              8</div>
+            <div id="8_3" ref="beat8_3" v-bind:class="{hide:this.notes.beat8[3]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;background: transparent; border: 3px solid transparent;width: 40px;height: 40px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;transform: translateX(5px) translateY(-3px);">
+              8</div>
+            <div id="8_2" ref="beat8_2" v-bind:class="{hide:this.notes.beat8[2]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent; border: 3px solid transparent; width: 34px; height: 34px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translateX(5px);">
+              8</div>
+            <div id="8_1" ref="beat8_1" v-bind:class="{hide:this.notes.beat8[1]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent; border: 3px solid transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translateX(4px) translateY(1px);">
+              8</div>
+            <div class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; opacity: 0;">
+              5</div>
+            <div class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; opacity: 0;">
+              6</div>
+            <div id="2_1" ref="beat2_1" v-bind:class="{hide:this.notes.beat2[1]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center "
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translateX(-5px) translateY(1px);">
+              2</div>
+            <div id="2_2" ref="beat2_2" v-bind:class="{hide:this.notes.beat2[2]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center "
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 34px; height: 34px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translateX(-3px);">
+              2</div>
+            <div id="2_3" ref="beat2_3" v-bind:class="{hide:this.notes.beat2[3]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center "
+              style="transform: translate(-3px, -2px);pointer-events: auto;border: 3px solid transparent; background: transparent; width: 40px; height: 40px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              2</div>
+            <div id="2_4" ref="beat2_4" v-bind:class="{hide:this.notes.beat2[4]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center "
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 50px; height: 50px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              2</div>
+          </div>
+          <div class="d-lg-flex justify-content-center align-items-center align-items-lg-center"
+            style="pointer-events: none; position: absolute; gap: 15.5px; transform: translate(7px) translateX(-9px) translateY(-6px) rotate(75deg); width: 100%; height: 100%; padding-left: 0px; margin-left: -7px;">
+            <div id="12_4" ref="beat12_4" v-bind:class="{hide:this.notes.beat12[4]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;background: transparent;border: 3px solid transparent;width: 50px;height: 50px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;transform: translateX(-7px);">
+              12</div>
+            <div id="12_3" ref="beat12_3" v-bind:class="{hide:this.notes.beat12[3]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 40px; height: 40px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              12</div>
+            <div id="12_2" ref="beat12_2" v-bind:class="{hide:this.notes.beat12[2]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 34px; height: 34px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              12</div>
+            <div id="12_1" ref="beat12_1" v-bind:class="{hide:this.notes.beat12[1]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="transform: translateX(1px);pointer-events: auto;background: transparent;border: 3px solid transparent;width: 26px;height: 26px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;">
+              12</div>
+            <div class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; opacity: 0;">
+              15</div>
+            <div class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; opacity: 0;">
+              16</div>
+            <div id="6_1" ref="beat6_1" v-bind:class="{hide:this.notes.beat6[1]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;background: transparent;border: 3px solid transparent;width: 26px;height: 26px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;transform: translateX(-8px);">
+              6</div>
+            <div id="6_2" ref="beat6_2" v-bind:class="{hide:this.notes.beat6[2]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;background: transparent;border: 3px solid transparent;width: 34px;height: 34px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;transform: translateX(-8px);">
+              6</div>
+            <div id="6_3" ref="beat6_3" v-bind:class="{hide:this.notes.beat6[3]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;background: transparent;border: 3px solid transparent;width: 40px;height: 40px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;padding-right: 0px;transform: translate(-9px,2px);">
+              6</div>
+            <div id="6_4" ref="beat6_4" v-bind:class="{hide:this.notes.beat6[4]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 50px; height: 50px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              6</div>
+          </div>
+          <div class="d-lg-flex justify-content-center align-items-center align-items-lg-center"
+            style="pointer-events: none; position: absolute; gap: 15.5px; transform: translate(7px) translateX(-3px) translateY(-4px) rotate(15deg); width: 100%; height: 100%; padding-left: 0px; margin-left: -7px;">
+            <div id="10_4" ref="beat10_4" v-bind:class="{hide:this.notes.beat10[4]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background:transparent;border: 3px solidtransparent; width: 50px; height: 50px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translateX(-4px);">
+              10</div>
+            <div id="10_3" ref="beat10_3" v-bind:class="{hide:this.notes.beat10[3]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background:transparent;border: 3px solidtransparent; width: 40px; height: 40px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              10</div>
+            <div id="10_2" ref="beat10_2" v-bind:class="{hide:this.notes.beat10[2]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="transform: translate(2px, 0px);pointer-events: auto;background:transparent;border: 3px solidtransparent;width: 34px;height: 34px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;">
+              10</div>
+            <div id="10_1" ref="beat10_1" v-bind:class="{hide:this.notes.beat10[1]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;background:transparent;border: 3px solidtransparent;width: 26px;height: 26px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;transform: translate(3px, 1px);">
+              10</div>
+            <div class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; overflow: visible; opacity: 0;">
+              25</div>
+            <div class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; opacity: 0;">
+              4</div>
+            <div id="4_1" ref="beat4_1" v-bind:class="{hide:this.notes.beat4[1]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;background: transparent;border: 3px solid transparent;width: 26px;height: 26px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;transform: translateX(-7px);">
+              4</div>
+            <div id="4_2" ref="beat4_2" v-bind:class="{hide:this.notes.beat4[2]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 34px; height: 34px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translateX(-6px);">
+              4</div>
+            <div id="4_3" ref="beat4_3" v-bind:class="{hide:this.notes.beat4[3]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 40px; height: 40px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; padding-right: 0px; transform: translateX(-7px);">
+              4</div>
+            <div id="4_4" ref="beat4_4" v-bind:class="{hide:this.notes.beat4[4]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 50px; height: 50px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              4</div>
+          </div>
+          <div class="d-lg-flex justify-content-center align-items-center align-items-lg-center"
+            style="pointer-events: none; position: absolute; gap: 15.5px; transform: translate(7px) translateX(1px) translateY(-4px) rotate(-15deg); width: 100%; height: 100%; padding-left: 0px; margin-left: -7px;">
+            <div id="9_4" ref="beat9_4" v-bind:class="{hide:this.notes.beat9[4]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 50px; height: 50px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translateX(-4px);">
+              9</div>
+            <div id="9_3" ref="beat9_3" v-bind:class="{hide:this.notes.beat9[3]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="transform: translate(0px, -5px);pointer-events: auto;background: transparent;border: 3px solid transparent;width: 40px;height: 40px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;">
+              9</div>
+            <div id="9_2" ref="beat9_2" v-bind:class="{hide:this.notes.beat9[2]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 34px; height: 34px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              9</div>
+            <div id="9_1" ref="beat9_1" v-bind:class="{hide:this.notes.beat9[1]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="transform: translate(2px, 1px);pointer-events: auto;background: transparent;border: 3px solid transparent;width: 26px;height: 26px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;">
+              9</div>
+            <div class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; overflow: visible; opacity: 0;">
+              9</div>
+            <div class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; opacity: 0;">
+              3</div>
+            <div id="3_1" ref="beat3_1" v-bind:class="{hide:this.notes.beat3[1]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;background:transparent;border: 3px solidtransparent;width: 26px;height: 26px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;transform: translateX(-8px);">
+              3</div>
+            <div id="3_2" ref="beat3_2" v-bind:class="{hide:this.notes.beat3[2]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;background:transparent;border: 3px solidtransparent;width : 34px;height: 34px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;transform: translateX(-7px);">
+              3</div>
+            <div id="3_3" ref="beat3_3" v-bind:class="{hide:this.notes.beat3[3]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;background:transparent;border: 3px solidtransparent;width: 40px;height: 40px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;padding-right: 0px;transform: translate(-9px,-2px);">
+              3</div>
+            <div id="3_4" ref="beat3_4" v-bind:class="{hide:this.notes.beat3[4]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background:transparent;border: 3px solidtransparent; width: 50px; height: 50px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              3</div>
+          </div>
+          <div class="d-lg-flex justify-content-center align-items-center align-items-lg-center"
+            style="pointer-events: none; position: absolute; gap: 15.5px; transform: translate(7px) translateX(-7px) translateY(-3px) rotate(45deg); width: 100%; height: 100%; padding-left: 0px; margin-left: -7px;">
+            <div id="11_4" ref="beat11_4" v-bind:class="{hide:this.notes.beat11[4]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;background: transparent;border: 3px solid transparent;width: 50px;height: 50px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;transform: translateX(-7px);">
+              11</div>
+            <div id="11_3" ref="beat11_3" v-bind:class="{hide:this.notes.beat11[3]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;background: transparent;border: 3px solid transparent;width: 40px;height: 40px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;transform: translate(-3px, -1px);">
+              11</div>
+            <div id="11_2" ref="beat11_2" v-bind:class="{hide:this.notes.beat11[2]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 34px; height: 34px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              11</div>
+            <div id="11_1" ref="beat11_2" v-bind:class="{hide:this.notes.beat11[1]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              11</div>
+            <div class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; overflow: visible; opacity: 0;">
+              11</div>
+            <div class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; opacity: 0;">
+              11</div>
+            <div id="5-1" ref="beat5_1" v-bind:class="{hide:this.notes.beat5[1]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;width: 26px;height: 26px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;transform: translateX(-8px);">
+              5</div>
+            <div id="5-2" ref="beat5_2" v-bind:class="{hide:this.notes.beat5[2]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;width: 34px;height: 34px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;transform: translateX(-7px);">
+              5</div>
+            <div id="5-3" ref="beat5_3" v-bind:class="{hide:this.notes.beat5[3]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;width: 40px;height: 40px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;padding-right: 0px;transform: translateX(-9px);">
+              5</div>
+            <div id="5-4" ref="beat5_4" v-bind:class="{hide:this.notes.beat5[4]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="  z-index:99;pointer-events: auto;  width: 50px; height: 50px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              5</div>
+          </div>
+          <div class="d-lg-flex justify-content-center align-items-center align-items-lg-center"
+            style="pointer-events: none; position: absolute; gap: 15.5px; transform: translate(6px) translateX(-10px) translateY(-10px) rotate(105deg); width: 100%; height: 100%; padding-left: 0px; margin-left: -7px;">
+            <div id="1_4" ref="beat1_4" class="beat1_4"
+              class="border rounded-circle d-lg-flex justify-content-lg-start align-items-lg-center"
+              v-bind:class="{hide:this.notes.beat1[4]==0}"
+              v-bind:style="{ currentPattern }"
+              >
+              1</div>
+            <div id="1_3" ref="beat1_3"
+              class="border rounded-circle d-lg-flex justify-content-lg-start align-items-lg-center"
+              v-bind:class="{hide:this.notes.beat1[3]==0}"
+              style="pointer-events: auto; background: transparent; border: 3px solid transparent; width: 40px; height: 40px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              1</div>
+            <div id="1_2" ref="beat1_2"
+              class="border rounded-circle d-lg-flex justify-content-lg-start align-items-lg-center"
+              v-bind:class="{hide:this.notes.beat1[2]==0}"
+              style="transform: translate(3px, 0px);pointer-events: auto; background: transparent; border: 3px solid transparent; width: 34px; height: 34px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              1</div>
+            <div id="1_1" ref="beat1_1"
+              class="border rounded-circle d-lg-flex justify-content-lg-start align-items-lg-center"
+              v-bind:class="{hide:this.notes.beat1[1]==0}"
+              style="pointer-events: auto; background: transparent; border: 3px solid transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translate(3px, 1px);">
+              1</div>
+            <div class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; overflow: visible; opacity: 0;">
+              55</div>
+            <div class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; opacity: 0;">
+              56</div>
+            <div id="7_1" ref="beat7_1" v-bind:class="{hide:this.notes.beat7[1]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;background: transparent;border: 3px solid transparent;width: 26px;height: 26px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;transform: translateX(-7px);">
+              7</div>
+            <div id="7_2" ref="beat7_2" v-bind:class="{hide:this.notes.beat7[2]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 34px; height: 34px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translateX(-6px);">
+              7</div>
+            <div id="7_3" ref="beat7_3" v-bind:class="{hide:this.notes.beat7[3]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto;background: transparent;border: 3px solid transparent;width: 40px;height: 40px;border-radius: 50%;position: relative;margin: 0px 0px 15px 1px;padding-right: 0px;transform: translateX(-8px) translateY(2px);">
+              7</div>
+            <div id="7_4" ref="beat7_4" v-bind:class="{hide:this.notes.beat7[4]==0}"
+              class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center"
+              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 50px; height: 50px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              7</div>
+          </div>
+
+          <div style=" position: absolute; width: 530px;height: 530px;margin-top: 514px;margin-left: 1200px;">
+            <span
+              style=" font-weight: 700;rotate: 12deg;color:#409eff; position: absolute; margin-top: 155px;margin-left: -298px;">乐谱节奏</span>
+            <el-slider :disabled="running" style="rotate: 12deg;" :max="90" :min="10" v-model="speed" vertical
+              :step="10" show-stops height="200px">
+            </el-slider>
+          </div>
+
+          <div class="a-input-group">
+            <input v-model="simulate" type="email" class="input" id="Email" name="Email"
+              placeholder="模拟吹气数据 (例如:1_1,0.8)" autocomplete="off">
+            <input class="button--submit" value="上传" type="submit" v-on:click="simulateBlow">
+          </div>
+
+          <div class="wheel-and-hamster" aria-label="Orange and tan hamster running in a metal wheel" role="img"
+            style="width: 530px;height: 530px;margin-top: -16px;margin-left: 3px;">
+            <div ref="indicator" :class="inAnimation?'spoke-anim':'hide'" class="spoke" style="width: 530px;"></div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+    <div style="display:flex; flex-direction:row;align-items: center;justify-content:center;gap: 300px;">
+      <div style="flex:1;"> <button v-on:click="callSerial" class="learn-more" id="app">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">{{connectText}}</span>
+        </button></div>
+
+      <div style="flex:4; flex-direction: row;">
+        <button class="play" v-on:click="play" ref="play" v-bind:style="{background:playBtnColor}">
+          <span v-if="!running">播放乐谱</span>
+          <span style="
+          color: #fffbf8;" v-else>正在播放</span>
+          <svg v-if="!running" t="1672741360979" class="icon" viewBox="0 0 1024 1024" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" p-id="2952" width="29" height="29">
+            <path
+              d="M512 42.666667C252.793333 42.666667 42.666667 252.793333 42.666667 512s210.126667 469.333333 469.333333 469.333333 469.333333-210.126667 469.333333-469.333333S771.206667 42.666667 512 42.666667z m0 896c-235.64 0-426.666667-191.026667-426.666667-426.666667s191.026667-426.666667 426.666667-426.666667 426.666667 191.026667 426.666667 426.666667-191.026667 426.666667-426.666667 426.666667z m-74.666667-213.38a53.373333 53.373333 0 0 1-53.333333-53.333334V352.066667A53.333333 53.333333 0 0 1 467.373333 308L702 467.933333a53.333333 53.333333 0 0 1 0 88.133334L467.373333 716a53.286667 53.286667 0 0 1-30.04 9.286667z m0.08-383.933334a11.093333 11.093333 0 0 0-5.08 1.28 10.446667 10.446667 0 0 0-5.666666 9.433334v319.866666a10.666667 10.666667 0 0 0 16.666666 8.82l234.666667-159.94a10.666667 10.666667 0 0 0 0-17.626666l-234.666667-159.933334a10.313333 10.313333 0 0 0-5.906666-1.92z"
+              fill="#734500" p-id="2953"></path>
+          </svg>
+          <svg v-else width="29" height="29" viewBox="0 0 184 184" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M91.6667 0C41.0404 0 0 41.0404 0 91.6667C0 142.293 41.0404 183.333 91.6667 183.333C142.293 183.333 183.333 142.293 183.333 91.6667C183.333 41.0404 142.293 0 91.6667 0ZM91.6667 175C45.6432 175 8.33333 137.69 8.33333 91.6667C8.33333 45.6432 45.6432 8.33333 91.6667 8.33333C137.69 8.33333 175 45.6432 175 91.6667C175 137.69 137.69 175 91.6667 175Z"
+              fill="#FFFBF8" />
+            <path
+              d="M72.5043 56C69.4644 56 67 58.4644 67 61.5043V123.478C67 126.518 69.4644 128.983 72.5043 128.983C75.5442 128.983 78.0085 126.518 78.0085 123.478V61.5043C78.0085 58.4644 75.5442 56 72.5043 56Z"
+              fill="#FFFBF8" />
+            <path
+              d="M110.83 56C107.79 56 105.326 58.4644 105.326 61.5043V123.478C105.326 126.518 107.79 128.983 110.83 128.983C113.87 128.983 116.334 126.518 116.334 123.478V61.5043C116.334 58.4644 113.87 56 110.83 56Z"
+              fill="#FFFBF8" />
+          </svg>
+        </button>
+
+        <button class="instrument" v-on:click="toggleInstrument">
+          <span>{{instrument}}</span>
+
+
+          <svg v-if="instrument=='马林巴'" width="29px" height="29px" viewBox="0 0 30 30" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Marimba">
+                <g transform="translate(0.000000, 4.500000)" fill="#16A8F0" fill-rule="nonzero">
+                  <path
+                    d="M2.19810631,0.982028556 L2.19810631,19.9447629 C2.19810631,20.4209779 2.58388441,20.8067559 3.06009939,20.8067559 L6.50818803,20.8067559 C6.98440301,20.8067559 7.37018111,20.4209779 7.37018111,19.9447629 L7.37018111,0.982028556 C7.37018111,0.506956491 6.98440301,0.120035481 6.50818803,0.120035481 L3.06009939,0.120035481 C2.58388441,0.120035481 2.19810631,0.506956491 2.19810631,0.982028556 Z"
+                    id="Fill-1"></path>
+                  <path
+                    d="M9.52448977,7.0160387 L1.37006389,7.0160387 C0.893848904,7.0160387 0.50807081,7.40181679 0.50807081,7.87803177 C0.50807081,8.35424675 0.893848904,8.74002485 1.37006389,8.74002485 L9.52448977,8.74002485 L9.52448977,12.1881144 L1.37006389,12.1881144 C0.893848904,12.1881144 0.50807081,12.5738925 0.50807081,13.0501074 C0.50807081,13.5251795 0.893848904,13.9109576 1.37006389,13.9109576 L9.52448977,13.9109576 L9.52448977,19.0827997 C9.52448977,19.5590147 9.91026786,19.9447928 10.3864828,19.9447928 L13.8345724,19.9447928 C14.3107874,19.9447928 14.6965654,19.5590147 14.6965654,19.0827997 L14.6965654,1.84410955 C14.6965654,1.36789457 14.3107874,0.982116473 13.8345724,0.982116473 L10.3864828,0.982116473 C9.91026786,0.982116473 9.52448977,1.36789457 9.52448977,1.84410955 L9.52448977,7.0160387 Z"
+                    id="Fill-2"></path>
+                  <path
+                    d="M16.8508741,12.188173 L16.8508741,8.74008346 L14.6964482,8.74008346 C14.2202332,8.74008346 13.8344551,8.35430536 13.8344551,7.87809038 C13.8344551,7.4018754 14.2202332,7.01609731 14.6964482,7.01609731 L16.8508741,7.01609731 L16.8508741,2.70613193 C16.8508741,2.22991695 17.2366522,1.84413885 17.7128672,1.84413885 L21.1609567,1.84413885 C21.6371717,1.84413885 22.0229498,2.22991695 22.0229498,2.70613193 L22.0229498,18.2207762 C22.0229498,18.6969911 21.6371717,19.0827692 21.1609567,19.0827692 L17.7128672,19.0827692 C17.2366522,19.0827692 16.8508741,18.6969911 16.8508741,18.2207762 L16.8508741,13.9108111 L14.6964482,13.9108111 C14.2202332,13.9108111 13.8344551,13.525033 13.8344551,13.0499609 C13.8344551,12.5737459 14.2202332,12.1879678 14.6964482,12.1879678 L16.8508741,12.188173 Z"
+                    id="Fill-3"></path>
+                  <path
+                    d="M24.1772584,12.188173 L24.1772584,8.74008346 L22.0228326,8.74008346 C21.5466176,8.74008346 21.1608395,8.35430536 21.1608395,7.87809038 C21.1608395,7.4018754 21.5466176,7.01609731 22.0228326,7.01609731 L24.1772584,7.01609731 L24.1772584,3.56800778 C24.1772584,3.0917928 24.5630365,2.70601471 25.0392515,2.70601471 L28.487341,2.70601471 C28.963556,2.70601471 29.3493341,3.0917928 29.3493341,3.56800778 L29.3493341,17.3588977 C29.3493341,17.8351127 28.963556,18.2208922 28.487341,18.2208922 L25.0392515,18.2208922 C24.5630365,18.2208922 24.1772584,17.8351127 24.1772584,17.3588977 L24.1772584,13.9108081 L22.0228326,13.9108081 C21.5466176,13.9108081 21.1608395,13.5250301 21.1608395,13.049958 C21.1608395,12.573743 21.5466176,12.1879649 22.0228326,12.1879649 L24.1772584,12.188173 Z"
+                    id="Fill-4"></path>
+                  <path
+                    d="M31.0709225,12.1881749 L31.0709225,8.74008536 L28.9164966,8.74008536 C28.4402816,8.74008536 28.0545035,8.35430727 28.0545035,7.87809229 C28.0545035,7.40187731 28.4402816,7.01609921 28.9164966,7.01609921 L31.0709225,7.01609921 L31.0709225,13.9108101 L28.9164966,13.9108101 C28.4402816,13.9108101 28.0545035,13.525032 28.0545035,13.0499599 C28.0545035,12.5737449 28.4402816,12.1879668 28.9164966,12.1879668 L31.0709225,12.1881749 Z"
+                    id="Fill-4"
+                    transform="translate(29.562713, 10.463455) scale(-1, 1) translate(-29.562713, -10.463455) "></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+
+          <svg v-else-if="instrument=='钢琴'" width="29px" height="29px" viewBox="0 0 40 40" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g transform="translate(-10.000000, -11.00000)" id="Page-1" stroke="none" stroke-width="1" fill="none"
+              fill-rule="evenodd">
+              <g id="Piano">
+                <path
+                  d="M35.5354533,21.8143583 C34.2144127,21.0371594 33.1248504,19.9231245 32.3796393,18.5851745 C31.5817735,17.1587763 30.4150357,15.9732022 28.9999103,15.1565002 C27.5847848,14.3397982 25.9758534,13.9182715 24.3424012,13.9408653 C19.3611597,14.002967 15.2456223,18.1891386 15.2456223,23.1798224 L15.2890911,27.7266075 C15.2890911,28.4018968 15.2890911,28.8122993 15.2890911,28.9578152 L15.2890911,44.0219761 C15.2890911,45.1472838 16.2017566,46.0599976 17.3289914,46.0599976 L42.6918932,46.0599976 C43.817201,46.0599976 44.7317935,45.147332 44.7317935,44.0219761 L44.7317935,33.3349487 L44.7543777,27.8681084 C44.7543777,26.5790556 44.2425239,25.3408268 43.3298583,24.4281612 C42.4190715,23.5154957 41.1808428,23.0036418 39.8899063,23.0036418 C38.358189,23.0018063 36.8546152,22.5896881 35.5354533,21.8143583 Z M17.3212112,43.7217352 L17.3212112,35.5168849 C17.3212112,35.3511995 17.4555258,35.2168849 17.6212112,35.2168849 L20.2267106,35.2168849 L20.2267106,39.6711458 C20.2267106,40.2338237 20.7366857,40.6910959 21.2466608,40.6910959 C21.7566359,40.6910959 22.2666109,40.2338141 22.2666109,39.6711458 L22.2666109,35.2168849 L23.9658695,35.2168849 L23.9658695,39.6711458 C23.9658695,40.2338237 24.4231513,40.6910959 24.9858196,40.6910959 C25.548488,40.6910959 26.0057698,40.2338141 26.0057698,39.6711458 L26.0057698,35.2168849 L30.0855704,35.2168849 L30.0855704,39.6711458 C30.0836868,40.2338237 30.5409686,40.6910959 31.1036369,40.6910959 C31.6681937,40.6910959 32.1235871,40.2338141 32.1235871,39.6711458 L32.1235871,35.2168849 L33.8830637,35.2168849 L33.8830637,39.6711458 C33.8830637,40.2338237 34.3403456,40.6910959 34.9030139,40.6910959 C35.4656919,40.6910959 35.9229641,40.2338141 35.9229641,39.6711458 L35.9229641,35.2168849 L37.6222226,35.2168849 L37.6222226,39.6711458 C37.6222226,40.2338237 38.0776208,40.6910959 38.6421728,40.6910959 C39.2048507,40.6910959 39.6621229,40.2338141 39.6621229,39.6711458 L39.6621229,35.2168849 L42.6786645,35.2168849 L42.6786645,44.0236622 L17.6212112,44.0217352 C17.4555347,44.0217226 17.321234,43.8874117 17.321234,43.7217352 L17.3212112,43.7217352 Z"
+                  id="Page-1" fill="#00A7F3" fill-rule="nonzero"></path>
+              </g>
+            </g>
+          </svg>
+
+          <svg v-else-if="instrument=='电子乐器'" width="29px" height="29px" viewBox="0 0 33 33" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g transform="translate(-13.000000, -14.00000)" id="Page-1" stroke="none" stroke-width="1" fill="none"
+              fill-rule="evenodd">
+              <g id="Synth">
+                <path
+                  d="M44.5187166,30.4876238 C44.0445633,27.3811881 43.5454545,24.1757426 41,24.1757426 C37.9928699,24.1757426 37.2816399,28.8415842 36.5204991,33.779703 C36.0213904,37.009901 35.3475936,41.4529703 34,41.4529703 C32.5026738,41.4529703 31.916221,35.1287129 31.5294118,30.9331683 C30.9180036,24.2871287 30.3315508,18 27,18 C23.7557932,18 23.0819964,23.259901 22.3707665,28.8415842 C21.9465241,32.1460396 21.3101604,37.1336634 20,37.1336634 C18.6524064,37.1336634 18.1657754,34.4108911 17.6916221,31.7747525 C17.1176471,28.5940594 16.4812834,25.0173267 13.9607843,24.3118812 C13.4741533,24.1757426 13,24.5470297 13,25.0544554 C13,25.4381188 13.2370766,25.710396 13.5614973,25.8217822 C15.0213904,26.3044554 15.57041,28.7425743 16.1568627,32.0470297 C16.7433155,35.3143564 17.342246,38.6806931 20,38.6806931 C22.6702317,38.6806931 23.2442068,34.2128713 23.9055258,29.039604 C24.4171123,25.029703 25.1283422,19.5470297 27,19.5470297 C28.9090909,19.5470297 29.5329768,26.2054455 29.9821747,31.0816832 C30.5686275,37.480198 31.0802139,43 34,43 C36.6827094,43 37.3190731,38.8415842 38.0677362,34.0148515 C38.6292335,30.3143564 39.3404635,25.7227723 41,25.7227723 C42.2103387,25.7227723 42.597148,28.259901 42.9839572,30.7227723 C43.483066,33.9529703 44.0944742,37.9009901 47.0641711,38.5693069 C47.5383244,38.6806931 48,38.3094059 48,37.8267327 C48,37.4430693 47.7504456,37.1336634 47.4135472,37.0470297 C45.6042781,36.6138614 45.0677362,34.0272277 44.5187166,30.4876238 Z"
+                  id="XMLID_264_" stroke="#16A8F0" fill="#16A8F0" fill-rule="nonzero"></path>
+              </g>
+            </g>
+          </svg>
+
+
+          <svg v-else-if="instrument=='弦乐器'" width="29px" height="29px" viewBox="0 0 37 37" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g transform="translate(-10.000000, -16.00000)" id="Page-1" stroke="none" stroke-width="1" fill="none"
+              fill-rule="evenodd">
+              <g id="Violin">
+                <g id="Group-2" transform="translate(20.000000, 7.000000)" fill-rule="nonzero">
+                  <path
+                    d="M17.8874873,33.1787597 C17.7664281,32.9081192 17.4597567,32.7987875 17.1550789,32.7987875 C16.8504219,32.8525587 16.6668188,32.7987875 16.4226706,32.5819136 C15.8133461,32.0943992 15.3856259,30.8487484 15.3856259,29.5474865 C15.3856259,28.4649063 15.873886,28.3555655 16.1180342,28.3018356 C16.9714603,28.0849617 17.1550789,25.9180395 17.1550789,25.2674085 C17.1550789,22.12543 14.95992,19.6879499 11.6067501,18.983635 L11.3626175,7.82471767 C11.7903481,7.82471767 12.1555605,7.55407722 12.1555605,7.12031101 C12.1555605,7.0665399 12.095031,6.14528226 12.095031,6.14528226 L12.8274393,6.14528226 C13.8039493,6.14528226 13.8039493,4.73651484 12.8274393,4.73651484 L12.0344962,4.73651484 L11.9739667,3.70771038 L12.8273928,3.70771038 C13.8039028,3.70771038 13.8039028,2.29894295 12.8273928,2.29894295 L11.9134319,2.29894295 L11.8529023,1.2701385 C11.7923728,0.241334042 7.70673779,0.241334042 7.64620305,1.2701385 L7.58567348,2.29894295 L6.6717126,2.29894295 C5.6952026,2.29894295 5.6952026,3.70771038 6.6717126,3.70771038 L7.52513875,3.70771038 L7.46460918,4.73651484 L6.67166611,4.73651484 C5.69515612,4.73651484 5.69515612,6.14528226 6.67166611,6.14528226 L7.40407444,6.14528226 L7.34354487,7.06653531 C7.34354487,7.28340923 7.40407444,7.44651204 7.52714796,7.60782539 C7.71075106,7.7709282 7.8923346,7.82469931 8.13647243,7.82469931 L7.83181536,18.9836166 C4.53907695,19.6880233 2.34391801,22.1255951 2.34391801,25.2673902 C2.34391801,25.9180211 2.5275211,28.084925 3.38096274,28.3018173 C3.56456584,28.3555884 4.05082195,28.4649201 4.05082195,29.5474681 C4.05082195,30.8468947 3.68563531,32.0943809 3.07431195,32.5818953 C2.83017929,32.7987692 2.58605179,32.8525357 2.34190363,32.7987692 C2.03724656,32.7987692 1.73257915,32.9063114 1.54896057,33.1787413 C0.756017505,34.5337331 0.390846358,36.0500519 0.390846358,37.6201464 C0.390846358,40.0039426 1.36735636,42.0077763 3.19532977,43.4703194 C6.67168678,46.1785133 12.8292367,46.1785133 16.305852,43.4703194 C18.1358398,42.0077763 19.1103354,40.0039426 19.1103354,37.6201464 C19.1103354,36.0482624 18.6826048,34.5319436 17.8916865,33.1787413 L17.8874873,33.1787597 Z"
+                    id="Path" fill="#16A8F0"></path>
+                  <path
+                    d="M5.86209171,34.1189681 C5.67848861,34.3896085 5.49690507,34.8771045 5.67848861,35.7984035 C5.73901819,36.122815 6.41089694,38.9941118 6.10621921,39.0478875 C4.82502115,39.2109903 6.04568964,41.9729742 7.08272921,40.1860329 C7.20378835,39.9153924 7.38738628,39.3741207 7.2663323,38.5065975 C7.20580273,38.235957 6.59647309,35.3108891 6.77807214,35.2571134 C8.11980493,35.0402395 6.77807214,32.3858028 5.86411125,34.1189681 L5.86209171,34.1189681 Z"
+                    id="Path" fill="#FFFFFF"></path>
+                  <path
+                    d="M13.7856892,34.1189681 C13.9692923,34.3896085 14.0903463,34.8771045 13.9692923,35.7984035 C13.9087627,36.122815 13.236884,38.9941118 13.5415565,39.0478875 C14.8227546,39.2109903 13.5415565,41.9729742 12.5650465,40.1860329 C12.3814435,39.9153924 12.2603895,39.3741207 12.3814435,38.5065975 C12.441973,38.235957 13.0513027,35.3108891 12.809174,35.2571134 C11.527976,35.0402395 12.809174,32.3858028 13.785684,34.1189681 L13.7856892,34.1189681 Z"
+                    id="Path" fill="#FFFFFF"></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+
+
+          <svg v-else-if="instrument=='木管乐器'" width="29px" height="29px" viewBox="0 0 37 37" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g transform="translate(-10.000000, -12.00000)" id="Page-1" stroke="none" stroke-width="1" fill="none"
+              fill-rule="evenodd">
+              <g id="Flute">
+                <g id="flute" transform="translate(13.000000, 13.000000)" fill="#16A8F0" fill-rule="nonzero">
+                  <path
+                    d="M30.1230902,0.697360242 L22.9825175,7.77226631 C22.1381119,7.55401235 21.2202797,7.67526455 20.4493007,8.13602293 L19.4335664,7.12962963 L20.2045455,6.36574074 C20.4982517,6.07473545 20.4982517,5.60185185 20.2045455,5.31084656 C19.9108392,5.01984127 19.4335664,5.01984127 19.1398601,5.31084656 L0.22027972,24.0564374 C-0.0734265734,24.3474427 -0.0734265734,24.8203263 0.22027972,25.1113316 C0.513986014,25.4023369 0.991258741,25.4023369 1.28496503,25.1113316 L1.70104895,24.6990741 L2.71678322,25.7054674 C2.25174825,26.4693563 2.11713287,27.3787478 2.34965035,28.215388 L1.022903,29.5299342 C0.630578914,29.9186504 0.627654119,30.5518086 1.01637028,30.9441327 C1.01853779,30.9463203 1.02071538,30.9484979 1.022903,30.9506654 L3.7751881,33.6776398 C4.16495168,34.063819 4.79309028,34.063819 5.18285386,33.6776398 L34.2830411,4.84506577 C34.6753651,4.4563496 34.6782899,3.82319138 34.2895738,3.4308673 C34.2874063,3.42867968 34.2852287,3.42650208 34.2830411,3.42433458 L31.530756,0.697360242 C31.1409924,0.311181034 30.5128538,0.311181034 30.1230902,0.697360242 Z M18.3688811,8.17239859 L19.3846154,9.17879189 C18.9685315,9.85780423 18.8216783,10.6580688 18.9562937,11.4098325 C18.1853147,11.276455 17.3776224,11.4219577 16.7045455,11.8342152 L15.6888112,10.8278219 L18.3688811,8.17239859 Z M5.4458042,20.9887566 L6.46153846,21.9951499 C6.04545455,22.6741623 5.8986014,23.4744268 6.03321678,24.2261905 C5.26223776,24.0928131 4.45454545,24.2383157 3.78146853,24.6505732 L2.76573427,23.6441799 L5.4458042,20.9887566 Z M6.70629371,28.6155203 C6.02097902,29.2945326 4.91958042,29.2945326 4.2465035,28.6155203 C4.22202797,28.5912698 4.18531469,28.5548942 4.16083916,28.5185185 C3.97727273,28.3123898 3.8548951,28.0820106 3.79370629,27.827381 C3.6958042,27.4514991 3.72027972,27.0513668 3.87937063,26.6876102 C3.96503497,26.4936067 4.08741259,26.3238536 4.23426573,26.1662257 C4.39335664,26.0085979 4.56468531,25.8994709 4.76048951,25.8145944 C5.12762238,25.6569665 5.53146853,25.6205908 5.91083916,25.7297178 C6.15559441,25.7903439 6.40034965,25.9115961 6.60839161,26.0934744 C6.6451049,26.1177249 6.66958042,26.1419753 6.70629371,26.178351 C7.37937063,26.8452381 7.37937063,27.9365079 6.70629371,28.6155203 Z M10.451049,24.8930776 C9.76573427,25.5720899 8.66433566,25.5720899 7.99125874,24.8930776 C7.96678322,24.8688272 7.93006993,24.8324515 7.90559441,24.7960758 C7.72202797,24.5899471 7.59965035,24.3595679 7.53846154,24.1049383 C7.44055944,23.7290564 7.46503497,23.3289242 7.62412587,22.9651675 C7.70979021,22.771164 7.83216783,22.6014109 7.97902098,22.4437831 C8.13811189,22.2861552 8.30944056,22.1770282 8.50524476,22.0921517 C8.87237762,21.9345238 9.27622378,21.8981481 9.65559441,22.0072751 C9.90034965,22.0679012 10.1451049,22.1891534 10.3531469,22.3710317 C10.3898601,22.3952822 10.4143357,22.4195326 10.451049,22.4559083 C11.1363636,23.1227954 11.1363636,24.2261905 10.451049,24.8930776 Z M11.5157343,19.1214727 L10.0472028,20.5764991 C9.2027972,20.3582451 8.28496503,20.4794974 7.51398601,20.9402557 L6.49825175,19.9338624 L10.8671329,15.6051587 L11.8828671,16.611552 C11.4178322,17.3754409 11.2954545,18.2848325 11.5157343,19.1214727 Z M14.6241259,11.8948413 L15.6398601,12.9012346 C15.2237762,13.5802469 15.0769231,14.3805115 15.2115385,15.1322751 C14.4405594,14.9988977 13.6328671,15.1444004 12.9597902,15.5566578 L11.9440559,14.5502646 L14.6241259,11.8948413 Z M15.8846154,19.5216049 C15.1993007,20.2006173 14.0979021,20.2006173 13.4248252,19.5216049 C13.4003497,19.4973545 13.3636364,19.4609788 13.3391608,19.4246032 C13.1555944,19.2184744 13.0332168,18.9880952 12.972028,18.7334656 C12.8741259,18.3575838 12.8986014,17.9574515 13.0576923,17.5936949 C13.1433566,17.3996914 13.2657343,17.2299383 13.4125874,17.0723104 C13.5594406,16.9146825 13.743007,16.8055556 13.9388112,16.720679 C14.3059441,16.5630511 14.7097902,16.5266755 15.0891608,16.6358025 C15.3339161,16.6964286 15.5786713,16.8176808 15.7867133,16.9995591 C15.8234266,17.0238095 15.8479021,17.04806 15.8846154,17.0844356 C16.5576923,17.7513228 16.5576923,18.8425926 15.8846154,19.5216049 Z M19.6293706,15.7991623 C18.9440559,16.4781746 17.8426573,16.4781746 17.1695804,15.7991623 C17.1451049,15.7749118 17.1083916,15.7385362 17.0839161,15.7021605 C16.9003497,15.4960317 16.777972,15.2656526 16.7167832,15.0110229 C16.6188811,14.6351411 16.6433566,14.2350088 16.8024476,13.8712522 C16.8881119,13.6772487 17.0104895,13.5074956 17.1573427,13.3498677 C17.3164336,13.1922399 17.4877622,13.0831129 17.6835664,12.9982363 C18.0506993,12.8406085 18.4545455,12.8042328 18.8339161,12.9133598 C19.0786713,12.9739859 19.3234266,13.0952381 19.5314685,13.2771164 C19.5681818,13.3013668 19.5926573,13.3256173 19.6293706,13.3619929 C20.3146853,14.0288801 20.3146853,15.1322751 19.6293706,15.7991623 Z M23.3741259,12.0888448 C22.6888112,12.7678571 21.5874126,12.7678571 20.9143357,12.0888448 C20.8898601,12.0645944 20.8531469,12.0282187 20.8286713,11.991843 C20.6451049,11.7857143 20.5227273,11.5553351 20.4615385,11.3007055 C20.3636364,10.9248236 20.3881119,10.5246914 20.5472028,10.1609347 C20.6328671,9.96693122 20.7552448,9.79717813 20.9020979,9.63955026 C21.0611888,9.4819224 21.2325175,9.37279541 21.4283217,9.28791887 C21.7954545,9.13029101 22.1993007,9.09391534 22.5786713,9.20304233 C22.8234266,9.26366843 23.0681818,9.38492063 23.2762238,9.56679894 C23.3129371,9.59104938 23.3374126,9.61529982 23.3741259,9.65167549 C24.0594406,10.3185626 24.0594406,11.4098325 23.3741259,12.0888448 Z M29.8846154,5.85648148 L29.0646853,5.04409171 C28.770979,4.75308642 28.770979,4.28020282 29.0646853,3.98919753 C29.3583916,3.69819224 29.8356643,3.69819224 30.1293706,3.98919753 L30.9493007,4.8015873 C31.243007,5.09259259 31.243007,5.56547619 30.9493007,5.85648148 C30.6555944,6.14748677 30.1783217,6.14748677 29.8846154,5.85648148 Z"
+                    id="XMLID_1132_"></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="loading" id="loading">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <el-dialog :visible.sync="visible" title="趣呼QUHU 连接成功!"></el-dialog>
+  </div>
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue-clipboard2/0.3.3/vue-clipboard.js"></script>
+  <!-- import echarts -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.1/echarts.js"></script>
+  <script src="/assets/js/echarts-liquidfill.js"></script>
+  <!-- import Tone.js  -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/tone/14.8.49/Tone.js"></script>
+  <!-- <script src="/assets/js/synth.js"></script> -->
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/bs-init.js"></script>
+  <script src="/assets/js/freelancer.js"></script>
+</body>
+
+<script></script>
+
+</html>
