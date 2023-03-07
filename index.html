@@ -80,13 +80,15 @@
               class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center "
               style="pointer-events: auto; width: 26px; height: 26px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translateX(-5px) translateY(1px);">
               2</div>
-            <div id="2_2" ref="beat2_2" v-bind:class="{hide:this.notes.beat2[2]==0}"
+            <div id="2_2" ref="beat2_2"
+            v-bind:class="{hide:this.notes.beat2[2]==0,panda:this.patterns.beat2[2] =='panda',frog:this.patterns.beat2[2] =='frog',frog_active:this.patterns.beat2[2] =='frog-active',pig:this.patterns.beat2[2] =='pig'}"
               class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center "
-              style="pointer-events: auto; background: transparent;border: 3px solid transparent; width: 34px; height: 34px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translateX(-3px);">
+              style="pointer-events: auto; width: 34px; height: 34px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px; transform: translateX(-3px);">
               2</div>
-            <div id="2_3" ref="beat2_3" v-bind:class="{hide:this.notes.beat2[3]==0}"
+            <div id="2_3" ref="beat2_3" 
+            v-bind:class="{hide:this.notes.beat2[3]==0,panda:this.patterns.beat2[3] =='panda',frog:this.patterns.beat2[3] =='frog',frog_active:this.patterns.beat2[3] =='frog-active',pig:this.patterns.beat2[3] =='pig'}"
               class="border rounded-circle  d-lg-flex justify-content-lg-start align-items-lg-center "
-              style="transform: translate(-3px, -2px);pointer-events: auto;border: 3px solid transparent; background: transparent; width: 40px; height: 40px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
+              style="transform: translate(-3px, -2px);pointer-events: auto;border: 3px solid transparent;  width: 40px; height: 40px; border-radius: 50%; position: relative; margin: 0px 0px 15px 1px;">
               2</div>
             <div id="2_4" ref="beat2_4"
             v-bind:class="{hide:this.notes.beat2[4]==0,panda:this.patterns.beat2[4] =='panda',frog:this.patterns.beat2[4] =='frog',frog_active:this.patterns.beat2[4] =='frog-active',pig:this.patterns.beat2[4] =='pig'}"

@@ -3,7 +3,7 @@ var VM = new Vue({
   data: {
     siteUrl:
       'https://static-mp-f069a595-b856-4970-895a-a3c3cd52557c.next.bspapp.com/',
-      //frog\frog-active\pig\panda
+    //frog\frog-active\pig\panda
     patterns: {
       beat1: {
         1: 'frog',
@@ -78,7 +78,7 @@ var VM = new Vue({
         4: '',
       },
     },
-    currentPatternUrl:'/assets/img/Frame 5.png',
+    currentPatternUrl: '/assets/img/Frame 5.png',
     currentPattern: 'Frame 5.png',
     inAnimation: false,
     playBtnColor: '#ffd38a',
@@ -490,6 +490,7 @@ var VM = new Vue({
     test() {},
 
     play() {
+      
       if (this.running) {
         return false
       }
@@ -502,23 +503,7 @@ var VM = new Vue({
       let noteLength = this.noteLength //音符长度 4n 8n 16n
 
       this.running = true //标记播放状态
-      //设定定时器，重复操作
-      let nIntervId
-      let intervCount = 1
-      eval('this.patterns.beat' + intervCount)[0] += '-active'
-      eval('this.patterns.beat' + intervCount)[1] += '-active'
-      eval('this.patterns.beat' + intervCount)[2] += '-active'
-      eval('this.patterns.beat' + intervCount)[3] += '-active'
-      intervCount += 1
-      
-      nIntervId=setInterval(() => {
-        eval('this.patterns.beat' + intervCount)[0] += '-active'
-        eval('this.patterns.beat' + intervCount)[1] += '-active'
-        eval('this.patterns.beat' + intervCount)[2] += '-active'
-        eval('this.patterns.beat' + intervCount)[3] += '-active'
-        intervCount +=1
-      }, 500)
-      
+
       this.playBtnColor = '#ffbba6'
       this.inAnimation = true
 
@@ -541,20 +526,44 @@ var VM = new Vue({
           type: 'warning',
         })
       }
-      // this.sampler.triggerAttackRelease('E4', noteLength, now)
-      // this.sampler.triggerAttackRelease('E4', noteLength, now + 1 * speedFactor)
-      // this.sampler.triggerAttackRelease('F4', noteLength, now + 2 * speedFactor)
-      // this.sampler.triggerAttackRelease('G4', noteLength, now + 3 * speedFactor)
 
+      //设定定时器，重复操作
+      let nIntervId
+      let intervCount = 1
+      eval('this.patterns.beat' + intervCount)[1] += '-active'
+      eval('this.patterns.beat' + intervCount)[2] += '-active'
+      eval('this.patterns.beat' + intervCount)[3] += '-active'
+      eval('this.patterns.beat' + intervCount)[4] += '-active'
+      intervCount += 1
+
+      nIntervId = setInterval(() => {
+        if (intervCount <= count){
+        
+        //this.patterns.beat1[1]+='-active'
+        eval('this.patterns.beat' + intervCount)[1] += '-active'
+        eval('this.patterns.beat' + intervCount)[2] += '-active'
+        eval('this.patterns.beat' + intervCount)[3] += '-active'
+        eval('this.patterns.beat' + intervCount)[4] += '-active'
+        }
+
+        eval('this.patterns.beat' + (intervCount-1))[1]=eval('this.patterns.beat' + (intervCount-1))[1].replace("-active", "")
+        console.log(eval('this.patterns.beat' + (intervCount-1))[1].replace("-active", ""))
+        eval('this.patterns.beat' + (intervCount-1))[2]=eval('this.patterns.beat' + (intervCount-1))[2].replace("-active","")
+        eval('this.patterns.beat' + (intervCount-1))[3]=eval('this.patterns.beat' + (intervCount-1))[3].replace("-active","")
+        eval('this.patterns.beat' + (intervCount-1))[4]=eval('this.patterns.beat' + (intervCount-1))[4].replace("-active","")
+
+        intervCount += 1
+      }, 500)
+
+      //播放时间
       setTimeout(() => {
-      //清除定时器
+        //清除定时器
         clearInterval(nIntervId)
-        nIntervId = null;
+        nIntervId = null
 
         this.running = false
         this.playBtnColor = '#ffd38a'
         this.inAnimation = false
-
       }, speedFactor * count * 1000)
     },
 
