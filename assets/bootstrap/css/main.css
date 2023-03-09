@@ -1,14 +1,56 @@
 .frog{
-    background: url('/assets/img/frog.png') center / cover, transparent;
+    background: url('/assets/img/ip2.png') center / cover, transparent;
 }
 .frog_active{
-    background: url('/assets/img/frog_active.png') center / cover, transparent;
+    background: url('/assets/img/ip1.png') center / cover, transparent;
 }
 .pig{
-    background: url('/assets/img/pig.png') center / cover, transparent;
+    background: url('/assets/img/ip3.png') center / cover, transparent;
 }
 .panda{
-    background: url('/assets/img/panda.png') center / cover, transparent;
+    background: url('/assets/img/ip4.png') center / cover, transparent;
+}
+.ip01{
+    background: url('/assets/img/ip01.png') center / cover, transparent;
+}
+.ip01_active{
+    background: url('/assets/img/ip01-active.png') center / cover, transparent;
+}
+.ip02{
+    background: url('/assets/img/ip02.png') center / cover, transparent;
+}
+.ip02_active{
+    background: url('/assets/img/ip02-active.png') center / cover, transparent;
+}
+.ip03{
+    background: url('/assets/img/ip03.png') center / cover, transparent;
+}
+.ip03_active{
+    background: url('/assets/img/ip03-active.png') center / cover, transparent;
+}
+.ip04{
+    background: url('/assets/img/ip04.png') center / cover, transparent;
+}
+.ip04_active{
+    background: url('/assets/img/ip04-active.png') center / cover, transparent;
+}
+.ip05{
+    background: url('/assets/img/ip05.png') center / cover, transparent;
+}
+.ip05_active{
+    background: url('/assets/img/ip05-active.png') center / cover, transparent;
+}
+.ip06{
+    background: url('/assets/img/ip06.png') center / cover, transparent;
+}
+.ip06_active{
+    background: url('/assets/img/ip06-active.png') center / cover, transparent;
+}
+.ip07{
+    background: url('/assets/img/ip07.png') center / cover, transparent;
+}
+.ip07_active{
+    background: url('/assets/img/ip07-active.png') center / cover, transparent;
 }
 
 .beat1_4{

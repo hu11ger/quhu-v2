@@ -6,16 +6,16 @@ var VM = new Vue({
     //frog\frog-active\pig\panda
     patterns: {
       beat1: {
-        1: 'frog',
-        2: 'frog-active',
-        3: 'pig',
-        4: 'panda',
+        1: 'ip01',
+        2: 'ip02',
+        3: 'ip03',
+        4: 'ip04',
       },
       beat2: {
-        1: 'panda',
-        2: 'pig',
-        3: 'frog',
-        4: 'frog',
+        1: 'ip05',
+        2: 'ip06',
+        3: 'ip07',
+        4: 'ip01',
       },
       beat3: {
         1: '',
@@ -89,16 +89,16 @@ var VM = new Vue({
     //C D E F G H A B
     notes: {
       beat1: {
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
+        1: 1,
+        2: 1,
+        3: 1,
+        4: 1,
       },
       beat2: {
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
+        1: 1,
+        2: 1,
+        3: 1,
+        4: 1,
       },
       beat3: {
         1: 0,
@@ -530,27 +530,27 @@ var VM = new Vue({
       //设定定时器，重复操作
       let nIntervId
       let intervCount = 1
-      eval('this.patterns.beat' + intervCount)[1] += '-active'
-      eval('this.patterns.beat' + intervCount)[2] += '-active'
-      eval('this.patterns.beat' + intervCount)[3] += '-active'
-      eval('this.patterns.beat' + intervCount)[4] += '-active'
+      eval('this.patterns.beat' + intervCount)[1] += '_active'
+      eval('this.patterns.beat' + intervCount)[2] += '_active'
+      eval('this.patterns.beat' + intervCount)[3] += '_active'
+      eval('this.patterns.beat' + intervCount)[4] += '_active'
       intervCount += 1
 
       nIntervId = setInterval(() => {
         if (intervCount <= count){
         
-        //this.patterns.beat1[1]+='-active'
-        eval('this.patterns.beat' + intervCount)[1] += '-active'
-        eval('this.patterns.beat' + intervCount)[2] += '-active'
-        eval('this.patterns.beat' + intervCount)[3] += '-active'
-        eval('this.patterns.beat' + intervCount)[4] += '-active'
+        //this.patterns.beat1[1]+='_active'
+        eval('this.patterns.beat' + intervCount)[1] += '_active'
+        eval('this.patterns.beat' + intervCount)[2] += '_active'
+        eval('this.patterns.beat' + intervCount)[3] += '_active'
+        eval('this.patterns.beat' + intervCount)[4] += '_active'
         }
-
-        eval('this.patterns.beat' + (intervCount-1))[1]=eval('this.patterns.beat' + (intervCount-1))[1].replace("-active", "")
-        console.log(eval('this.patterns.beat' + (intervCount-1))[1].replace("-active", ""))
-        eval('this.patterns.beat' + (intervCount-1))[2]=eval('this.patterns.beat' + (intervCount-1))[2].replace("-active","")
-        eval('this.patterns.beat' + (intervCount-1))[3]=eval('this.patterns.beat' + (intervCount-1))[3].replace("-active","")
-        eval('this.patterns.beat' + (intervCount-1))[4]=eval('this.patterns.beat' + (intervCount-1))[4].replace("-active","")
+        
+        eval('this.patterns.beat' + (intervCount-1))[1]=eval('this.patterns.beat' + (intervCount-1))[1].replace("_active", "")
+        console.log(eval('this.patterns.beat' + (intervCount-1))[1].replace("_active", ""))
+        eval('this.patterns.beat' + (intervCount-1))[2]=eval('this.patterns.beat' + (intervCount-1))[2].replace("_active","")
+        eval('this.patterns.beat' + (intervCount-1))[3]=eval('this.patterns.beat' + (intervCount-1))[3].replace("_active","")
+        eval('this.patterns.beat' + (intervCount-1))[4]=eval('this.patterns.beat' + (intervCount-1))[4].replace("_active","")
 
         intervCount += 1
       }, 500)
