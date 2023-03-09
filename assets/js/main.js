@@ -1,22 +1,22 @@
 var VM = new Vue({
   el: '#app',
   data: {
-    currentPattern:0,
+    currentPattern: 0,
     siteUrl:
       'https://static-mp-f069a595-b856-4970-895a-a3c3cd52557c.next.bspapp.com/',
     //frog\frog-active\pig\panda
     patterns: {
       beat1: {
-        1: 'ip01',
-        2: 'ip02',
-        3: 'ip03',
-        4: 'ip04',
+        1: '',
+        2: '',
+        3: '',
+        4: '',
       },
       beat2: {
-        1: 'ip05',
-        2: 'ip06',
-        3: 'ip07',
-        4: 'ip01',
+        1: '',
+        2: '',
+        3: '',
+        4: '',
       },
       beat3: {
         1: '',
@@ -88,16 +88,16 @@ var VM = new Vue({
     //C D E F G H A B
     notes: {
       beat1: {
-        1: 1,
-        2: 1,
-        3: 1,
-        4: 1,
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
       },
       beat2: {
-        1: 1,
-        2: 1,
-        3: 1,
-        4: 1,
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
       },
       beat3: {
         1: 0,
@@ -210,6 +210,24 @@ var VM = new Vue({
     this.updateIndicatorAnim()
   },
   computed: {
+    //获取当前选中的ip图案
+    getPattern() {
+      if (this.currentPattern == 6) {
+        return 'ip01'
+      } else if (this.currentPattern == 5) {
+        return 'ip02'
+      } else if (this.currentPattern == 4) {
+        return 'ip03'
+      } else if (this.currentPattern == 3) {
+        return 'ip04'
+      } else if (this.currentPattern == 2) {
+        return 'ip05'
+      } else if (this.currentPattern == 1) {
+        return 'ip06'
+      } else if (this.currentPattern == 0) {
+        return 'ip07'
+      }
+    },
     speedFactor() {
       if (this.speed == 50) {
         return 0.5
@@ -489,7 +507,6 @@ var VM = new Vue({
     test() {},
 
     play() {
-      
       if (this.running) {
         return false
       }
@@ -536,23 +553,35 @@ var VM = new Vue({
       intervCount += 1
 
       nIntervId = setInterval(() => {
-        if (intervCount <= count){
-        
-        //this.patterns.beat1[1]+='_active'
-        eval('this.patterns.beat' + intervCount)[1] += '_active'
-        eval('this.patterns.beat' + intervCount)[2] += '_active'
-        eval('this.patterns.beat' + intervCount)[3] += '_active'
-        eval('this.patterns.beat' + intervCount)[4] += '_active'
+        if (intervCount <= count) {
+          //this.patterns.beat1[1]+='_active'
+          eval('this.patterns.beat' + intervCount)[1] += '_active'
+          eval('this.patterns.beat' + intervCount)[2] += '_active'
+          eval('this.patterns.beat' + intervCount)[3] += '_active'
+          eval('this.patterns.beat' + intervCount)[4] += '_active'
         }
-        
-        eval('this.patterns.beat' + (intervCount-1))[1]=eval('this.patterns.beat' + (intervCount-1))[1].replace("_active", "")
-        console.log(eval('this.patterns.beat' + (intervCount-1))[1].replace("_active", ""))
-        eval('this.patterns.beat' + (intervCount-1))[2]=eval('this.patterns.beat' + (intervCount-1))[2].replace("_active","")
-        eval('this.patterns.beat' + (intervCount-1))[3]=eval('this.patterns.beat' + (intervCount-1))[3].replace("_active","")
-        eval('this.patterns.beat' + (intervCount-1))[4]=eval('this.patterns.beat' + (intervCount-1))[4].replace("_active","")
+
+        eval('this.patterns.beat' + (intervCount - 1))[1] = eval(
+          'this.patterns.beat' + (intervCount - 1),
+        )[1].replace('_active', '')
+        console.log(
+          eval('this.patterns.beat' + (intervCount - 1))[1].replace(
+            '_active',
+            '',
+          ),
+        )
+        eval('this.patterns.beat' + (intervCount - 1))[2] = eval(
+          'this.patterns.beat' + (intervCount - 1),
+        )[2].replace('_active', '')
+        eval('this.patterns.beat' + (intervCount - 1))[3] = eval(
+          'this.patterns.beat' + (intervCount - 1),
+        )[3].replace('_active', '')
+        eval('this.patterns.beat' + (intervCount - 1))[4] = eval(
+          'this.patterns.beat' + (intervCount - 1),
+        )[4].replace('_active', '')
 
         intervCount += 1
-      }, 500)
+      }, speedFactor*1000)
 
       //播放时间
       setTimeout(() => {
@@ -886,7 +915,7 @@ var VM = new Vue({
       }
     },
 
-    //处理从串口获得的信息，转化为圆点位置信息和吹气值
+    //处理从串口获得的信息，转化为圆点位置信息和吹气值/卡通图案
     handleSeriValue(value) {
       console.log(value)
       if (value.length == 1) {
@@ -923,12 +952,16 @@ var VM = new Vue({
       }
       console.log(locationX, locationY, extent)
       let notesCmd = `this.notes.beat${locationX}[${locationY}]`
-
+      let patternsCmd = `this.patterns.beat${locationX}[${locationY}]` //this.patterns.beat1[1]
+      // console.log(patternsCmd + '="' + this.getPattern+'"')
+      eval(patternsCmd + '="' + this.getPattern+'"')
+      //this.notes.beat1[1]=0.2
       console.log(notesCmd + '=' + extent)
       // eval(notesCmd + '=' + extent) //修改 data的数值
       let id = `beat${location}`
       let refCmd = `this.$refs.beat${location}`
       let refCmdWithID = `this.$refs.beat${location}.id`
+      //this.$refs.beat1_1 this.$refs.beat1_1.id
       console.log(refCmd, refCmdWithID)
       let hygrometer = echarts.getInstanceByDom(eval(refCmd))
       if (hygrometer == null) {
