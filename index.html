@@ -49,6 +49,51 @@
         ">
       <div
         style="width: 600px;height: 600px;margin-right: 223px;margin-left: 231px;background: url(&quot;/assets/img/circle3.png&quot;) center / cover;transform: translate(0px);">
+        <div class="d-lg-flex align-items-center justify-content-lg-center align-items-lg-center"
+          style="position: absolute;gap: 15.5px;transform: translate(6px) translateX(-10px) translateY(-10px) rotate(-90deg);width: 594px;padding-left: 0px;margin-left: -412px;margin-top: 240px;background: #FFF4E2;border-radius: 23px;">
+          <div
+          v-on:click="{currentPattern = 6}"
+            v-bind:class="{shadow:this.currentPattern==6,currentPattern:this.currentPattern==6,border:this.currentPattern!=6}" 
+            class="rounded-circle border-3 d-lg-flex justify-content-lg-start align-items-lg-center"
+            style="background: url('/assets/img/ip01.png') center / cover no-repeat, transparent;width: 70px;height: 70px;border-radius: 50%;position: relative;margin-top: 0px;margin-right: 0px;margin-bottom: 1px;margin-left: -10px;transform: rotate(90deg);border-width: 7px;">
+          </div>
+          <div
+          v-on:click="{currentPattern = 5}"
+            v-bind:class="{shadow:this.currentPattern==5,currentPattern:this.currentPattern==5,border:this.currentPattern!=5}" 
+            class="rounded-circle border-3 d-lg-flex justify-content-lg-start align-items-lg-center"
+            style="background: url('/assets/img/ip02.png') center / cover no-repeat, transparent;width: 70px;height: 70px;border-radius: 50%;position: relative;margin-top: 0px;margin-right: 0px;margin-bottom: 1px;margin-left: -10px;transform: rotate(90deg);border-width: 7px;">
+          </div>
+          <div
+          v-on:click="{currentPattern = 4}"
+          v-bind:class="{shadow:this.currentPattern==4,currentPattern:this.currentPattern==4,border:this.currentPattern!=4}" 
+          class="rounded-circle border-3 d-lg-flex justify-content-lg-start align-items-lg-center"
+            style="background: url('/assets/img/ip03.png') center / cover no-repeat, transparent;width: 70px;height: 70px;border-radius: 50%;position: relative;margin-top: 0px;margin-right: 0px;margin-bottom: 1px;margin-left: -10px;transform: rotate(90deg);border-width: 7px;">
+          </div>
+          <div
+          v-on:click="{currentPattern = 3}"
+          v-bind:class="{shadow:this.currentPattern==3,currentPattern:this.currentPattern==3,border:this.currentPattern!=3}" 
+          class="rounded-circle border-3 d-lg-flex justify-content-lg-start align-items-lg-center"
+            style="background: url('/assets/img/ip04.png') center / cover no-repeat, transparent;width: 70px;height: 70px;border-radius: 50%;position: relative;margin-top: 0px;margin-right: 0px;margin-bottom: 1px;margin-left: -10px;transform: rotate(90deg);border-width: 7px;">
+          </div>
+          <div
+          v-on:click="{currentPattern = 2}"
+          v-bind:class="{shadow:this.currentPattern==2,currentPattern:this.currentPattern==2,border:this.currentPattern!=2}" 
+          class="rounded-circle border-3 d-lg-flex justify-content-lg-start align-items-lg-center"
+            style="background: url('/assets/img/ip05.png') center / cover no-repeat, transparent;width: 70px;height: 70px;border-radius: 50%;position: relative;margin-top: 0px;margin-right: 0px;margin-bottom: 1px;margin-left: -10px;transform: rotate(90deg);border-width: 7px;">
+          </div>
+          <div
+          v-on:click="{currentPattern = 1}"
+            v-bind:class="{shadow:this.currentPattern==1,currentPattern:this.currentPattern==1,border:this.currentPattern!=1}" 
+            class="rounded-circle border-3 d-lg-flex justify-content-lg-start align-items-lg-center"
+            style="background: url('/assets/img/ip06.png') center / cover no-repeat, transparent;width: 70px;height: 70px;border-radius: 50%;position: relative;margin-top: 0px;margin-right: 0px;margin-bottom: 1px;margin-left: -10px;transform: rotate(90deg);border-width: 7px;">
+          </div>
+          <div
+          v-on:click="{currentPattern = 0}"
+            v-bind:class="{shadow:this.currentPattern==0,currentPattern:this.currentPattern==0,border:this.currentPattern!=0}" 
+            class=" rounded-circle border-3 d-lg-flex justify-content-lg-start align-items-lg-center"
+            style="background: url('/assets/img/ip07.png') center / cover no-repeat, transparent;width: 70px;height: 70px;border-radius: 50%;position: relative;margin-top: 0px;margin-right: 0px;margin-bottom: 1px;margin-left: -10px;transform: rotate(90deg);border-width: 7px;">
+          </div>
+        </div>
         <div class="d-lg-flex justify-content-lg-center align-items-lg-center"
           style="height: 600px; background: url(&quot;/assets/img/dot2.png&quot;) center center / cover no-repeat; margin-left: 11px; transform: translate(0px) translateY(7px) rotate(-12deg); position: relative; min-width: 300px; min-height: 300px;">
           <div class="d-lg-flex justify-content-center align-items-center align-items-lg-center"
@@ -264,8 +309,7 @@
             style="pointer-events: none; position: absolute; gap: 15.5px; transform: translate(6px) translateX(-10px) translateY(-10px) rotate(105deg); width: 100%; height: 100%; padding-left: 0px; margin-left: -7px;">
             <div id="1_4" ref="beat1_4" class="beat1_4"
               class="border rounded-circle d-lg-flex justify-content-lg-start align-items-lg-center"
-              v-bind:class="{hide:this.notes.beat1[4]==0,ip01:this.patterns.beat1[4] =='ip01',ip01_active:this.patterns.beat1[4] =='ip01_active',ip02:this.patterns.beat1[4] =='ip02',ip02_active:this.patterns.beat1[4] =='ip02_active',ip03:this.patterns.beat1[4] =='ip03',ip03_active:this.patterns.beat1[4] =='ip03_active',ip04:this.patterns.beat1[4] =='ip04',ip04_active:this.patterns.beat1[4] =='ip04_active',ip05:this.patterns.beat1[4] =='ip05',ip05_active:this.patterns.beat1[4] =='ip05_active',ip06:this.patterns.beat1[4] =='ip06',ip06_active:this.patterns.beat1[4] =='ip06_active',ip07:this.patterns.beat1[4] =='ip07',ip07_active:this.patterns.beat1[4] =='ip07_active'}"
-              >
+              v-bind:class="{hide:this.notes.beat1[4]==0,ip01:this.patterns.beat1[4] =='ip01',ip01_active:this.patterns.beat1[4] =='ip01_active',ip02:this.patterns.beat1[4] =='ip02',ip02_active:this.patterns.beat1[4] =='ip02_active',ip03:this.patterns.beat1[4] =='ip03',ip03_active:this.patterns.beat1[4] =='ip03_active',ip04:this.patterns.beat1[4] =='ip04',ip04_active:this.patterns.beat1[4] =='ip04_active',ip05:this.patterns.beat1[4] =='ip05',ip05_active:this.patterns.beat1[4] =='ip05_active',ip06:this.patterns.beat1[4] =='ip06',ip06_active:this.patterns.beat1[4] =='ip06_active',ip07:this.patterns.beat1[4] =='ip07',ip07_active:this.patterns.beat1[4] =='ip07_active'}">
               1</div>
             <div id="1_3" ref="beat1_3"
               class="border rounded-circle d-lg-flex justify-content-lg-start align-items-lg-center"

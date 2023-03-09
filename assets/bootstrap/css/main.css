@@ -1,3 +1,7 @@
+.currentPattern{
+    border:var(--bs-border-width) var(--bs-border-style) #feb559 !important
+}
+
 .frog{
     background: url('/assets/img/ip2.png') center / cover, transparent;
 }

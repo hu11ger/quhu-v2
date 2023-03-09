@@ -1,6 +1,7 @@
 var VM = new Vue({
   el: '#app',
   data: {
+    currentPattern:0,
     siteUrl:
       'https://static-mp-f069a595-b856-4970-895a-a3c3cd52557c.next.bspapp.com/',
     //frog\frog-active\pig\panda
@@ -78,8 +79,6 @@ var VM = new Vue({
         4: '',
       },
     },
-    currentPatternUrl: '/assets/img/Frame 5.png',
-    currentPattern: 'Frame 5.png',
     inAnimation: false,
     playBtnColor: '#ffd38a',
     connectText: '连接设备',
